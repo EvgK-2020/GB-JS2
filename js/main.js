@@ -1,5 +1,3 @@
-
-
 const products = [
     { id: 1, title: 'Notebook', price: 2000 },
     { id: 2, title: 'Keyboard', price: 200 },
