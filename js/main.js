@@ -28,7 +28,7 @@ render(products);
 
 
 let buttons = document.querySelectorAll(".to-cart");
-for (var item of buttons) {
+for (let item of buttons) {
     item.onclick = addToCart;
 }
 document.querySelector(".btn-cart").onclick = showCart;
