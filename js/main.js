@@ -31,9 +31,11 @@ let buttons = document.querySelectorAll(".to-cart");
 for (var item of buttons) {
     item.onclick = addToCart;
 }
+document.querySelector(".btn-cart").onclick = showCart;
+
 
 function addToCart(e) {
-    alert (e);
+    alert(e);
 }
 
 function showCart() {
