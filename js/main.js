@@ -6,16 +6,17 @@ const products = [
 ];
 
 
-const renderProduct = (title, price) => {
-    return `<div class="product-item">
+const renderProduct = (title = "", price = "") => `<div class="product-item">
                 <h3>${title}</h3>
                 <p>${price}</p>
-            </div>`
-};
+            </div>`;
 
 const render = productsList => {
     const productsElements = productsList.map(item => renderProduct(item.title, item.price));
-    document.querySelector('.products').innerHTML = productsElements;
+    for (let i = 0; i < productsElements.length; i++) {
+        document.querySelector('.products').innerHTML += productsElements[i];
+    }
+
 };
 
 render(products);
