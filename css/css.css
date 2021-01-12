@@ -26,10 +26,28 @@
 .products {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .product-item{
-    width: 150px; 
+    width: 290px; 
     margin-top: 15px;
     border: 1px solid black;
+    padding: 10px;
+}
+
+.product-img{
+    display: block;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.product-item-title{
+    text-align: center;
+    margin:10px auto;
+}
+
+.product-item-price{
+    font-style: italic;
+    margin-top: 20px;
 }
