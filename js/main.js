@@ -11,7 +11,7 @@ const renderProduct = (id, title = "Название товара", price = "0.0
                 <h3 class="product-item-title">${title}</h3>
                 <p class="product-item-description">${description}</p>
                 <p class="product-item-price">${price} руб.</p>
-                <button class="btn-cart" data-id="${id}">Добавить</button>
+                <button class="btn to-cart" data-id="${id}">Добавить</button>
             </div>`;
 
 const render = productsList => {
@@ -24,3 +24,29 @@ const render = productsList => {
 };
 
 render(products);
+
+
+
+let buttons = document.querySelectorAll(".to-cart");
+for (var item of buttons) {
+    item.onclick = addToCart;
+}
+
+function addToCart(e) {
+    alert (e);
+}
+
+function showCart() {
+    let darkLayer = document.createElement('div');
+    darkLayer.id = 'shadow';
+    document.body.appendChild(darkLayer);
+
+    let modalWin = document.getElementById('modal');
+    modalWin.classList.remove("close");
+
+    darkLayer.onclick = function () {
+        darkLayer.parentNode.removeChild(darkLayer);
+        modalWin.classList.add("close");
+        return false;
+    };
+}
